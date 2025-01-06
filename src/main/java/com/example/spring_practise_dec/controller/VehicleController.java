@@ -26,7 +26,9 @@ public class VehicleController {
 	@PostMapping("add")
 	public ResponseEntity<String> addVehicle(@RequestBody VehicleList vl){
 		vs.addVehicle(vl);
+		System.out.print("deep/test");		
 		return new ResponseEntity<>("added",HttpStatus.OK);
+		
 	}
 	@GetMapping("getvehi")
 		public ResponseEntity<List<VehicleList>> getVehicle(){
